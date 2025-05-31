@@ -29,8 +29,7 @@ const RowAddDelete = () => {
     someSelected,
     handleSelectAll, 
     handleSelectItem,
-    getSelectedCount,
-    setSelection
+    getSelectedCount
   } = useSelectAll({ 
     itemCount: users.length 
   })
