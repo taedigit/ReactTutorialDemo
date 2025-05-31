@@ -1,8 +1,6 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .logo {
@@ -39,4 +37,797 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  border-right: 1px solid #ccc;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  color: #333;
+  text-decoration: none;
+  padding: 8px 12px;
+  display: block;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.sidebar a:hover {
+  background-color: #f0f0f0;
+}
+
+.sidebar a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.data-table {
+  width: 850px;
+  border-collapse: collapse;
+  margin-top: 20px;
+  table-layout: fixed;
+}
+
+.data-table th,
+.data-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.data-table th {
+  background-color: #f2f2f2;
+}
+
+.data-table button {
+  margin-right: 5px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.address-column {
+  text-align: left !important;
+  width: 210px;
+}
+
+.email-column {
+  text-align: left !important;
+  width: 160px;
+}
+
+.data-table input[type="text"],
+.data-table input[type="email"],
+.data-table input[type="number"],
+.data-table input[type="date"] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  padding: 4px;
+  font-size: 12px;
+}
+
+.data-table input[type="number"] {
+  text-align: center;
+}
+
+.data-table th:first-child,
+.data-table td:first-child {
+  width: 50px;
+}
+
+.data-table th:nth-child(2),
+.data-table td:nth-child(2) {
+  width: 90px;
+}
+
+.data-table th:nth-child(5),
+.data-table td:nth-child(5) {
+  width: 50px;
+}
+
+.data-table th:nth-child(6),
+.data-table td:nth-child(6) {
+  width: 120px;
+}
+
+.data-table th:nth-child(7),
+.data-table td:nth-child(7) {
+  width: 160px;
+}
+
+.data-table label {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+.data-table input[type="radio"] {
+  margin-right: 3px;
+}
+
+.data-table input[type="radio"]:disabled + label,
+.data-table label:has(input[type="radio"]:disabled) {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.data-table input[type="radio"]:disabled {
+  cursor: not-allowed;
+}
+
+.data-table input[type="radio"]:checked + label,
+.data-table label:has(input[type="radio"]:checked) {
+  color: #2196F3;
+  font-weight: bold;
+}
+
+.data-table input[type="radio"]:checked {
+  accent-color: #2196F3;
+}
+
+.data-table input[type="checkbox"]:indeterminate {
+  accent-color: #2196F3;
+}
+
+/* 체크박스 공통 스타일 */
+.data-table input[type="checkbox"] {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.data-table input[type="checkbox"]:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.data-table input[type="checkbox"]:hover:not(:disabled) {
+  transform: scale(1.2);
+  transition: transform 0.1s ease;
+}
+
+.action-buttons {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.add-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.add-button:hover {
+  background-color: #45a049;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.delete-button:hover:not(:disabled) {
+  background-color: #d32f2f;
+}
+
+.delete-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.empty-message {
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+  color: #666;
+  font-style: italic;
+}
+
+.pagination-info {
+  margin-bottom: 15px;
+  color: #666;
+  font-size: 14px;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.pagination-button {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background-color: #f0f0f0;
+}
+
+.pagination-button:disabled {
+  background-color: #f9f9f9;
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.page-numbers {
+  display: flex;
+  gap: 5px;
+}
+
+.page-number {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  min-width: 40px;
+}
+
+.page-number:hover {
+  background-color: #f0f0f0;
+}
+
+.page-number.active {
+  background-color: #2196F3;
+  color: white;
+  border-color: #2196F3;
+}
+
+.search-controls {
+  margin-bottom: 20px;
+}
+
+.search-input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.search-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.status-filter {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.clear-button {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.clear-button:hover {
+  background-color: #f0f0f0;
+}
+
+.search-info {
+  color: #666;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.no-results {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  padding: 20px;
+}
+
+/* 팝업/모달 스타일 */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: auto;
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 0;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.modal-close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.modal-close-button:hover {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.modal-body {
+  padding: 0 20px 20px;
+}
+
+/* 확인 다이얼로그 스타일 */
+.confirm-dialog {
+  text-align: center;
+}
+
+.confirm-message {
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.confirm-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.confirm-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.confirm-button.primary {
+  background-color: #2196F3;
+  color: white;
+}
+
+.confirm-button.primary:hover {
+  background-color: #1976D2;
+}
+
+.confirm-button.danger {
+  background-color: #f44336;
+  color: white;
+}
+
+.confirm-button.danger:hover {
+  background-color: #d32f2f;
+}
+
+.confirm-button.warning {
+  background-color: #ff9800;
+  color: white;
+}
+
+.confirm-button.warning:hover {
+  background-color: #f57c00;
+}
+
+.cancel-button {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+}
+
+.cancel-button:hover {
+  background-color: #f0f0f0;
+}
+
+/* 팝업 데모 페이지 스타일 */
+.popup-demo-page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.popup-section {
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+.popup-section h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.popup-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.popup-button {
+  padding: 12px 24px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.popup-button:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-1px);
+}
+
+.popup-button.primary {
+  background-color: #2196F3;
+  color: white;
+  border-color: #2196F3;
+}
+
+.popup-button.primary:hover {
+  background-color: #1976D2;
+}
+
+.popup-button.danger {
+  background-color: #f44336;
+  color: white;
+  border-color: #f44336;
+}
+
+.popup-button.danger:hover {
+  background-color: #d32f2f;
+}
+
+.popup-button.warning {
+  background-color: #ff9800;
+  color: white;
+  border-color: #ff9800;
+}
+
+.popup-button.warning:hover {
+  background-color: #f57c00;
+}
+
+.message-log {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.log-message {
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+.log-message:last-child {
+  border-bottom: none;
+}
+
+.clear-log-button {
+  margin-top: 10px;
+  padding: 6px 12px;
+  background-color: #666;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.clear-log-button:hover {
+  background-color: #555;
+}
+
+/* 폼 스타일 */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #2196F3;
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.form-buttons button {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.form-buttons button[type="submit"] {
+  background-color: #2196F3;
+  color: white;
+  border-color: #2196F3;
+}
+
+.form-buttons button[type="submit"]:hover {
+  background-color: #1976D2;
+}
+
+.form-buttons button[type="button"] {
+  background-color: white;
+  color: #666;
+}
+
+.form-buttons button[type="button"]:hover {
+  background-color: #f0f0f0;
+}
+
+/* 게시판 스타일 */
+.board-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.board-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.post-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+}
+
+.post-table th,
+.post-table td {
+  border: 1px solid #ddd;
+  padding: 12px 8px;
+  text-align: center;
+}
+
+.post-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #333;
+}
+
+.post-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.post-table tr:hover {
+  background-color: #f0f7ff;
+}
+
+.post-title {
+  text-align: left !important;
+  cursor: pointer;
+  color: #2196F3;
+  text-decoration: underline;
+  padding-left: 15px !important;
+}
+
+.post-title:hover {
+  color: #1976D2;
+  font-weight: 500;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 4px 8px;
+  margin: 0 2px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.edit-btn {
+  background-color: #2196F3;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #1976D2;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* 게시글 상세 스타일 */
+.post-detail {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.post-header {
+  border-bottom: 2px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.post-header h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 20px;
+}
+
+.post-meta {
+  display: flex;
+  gap: 20px;
+  color: #666;
+  font-size: 14px;
+}
+
+.post-meta span {
+  display: flex;
+  align-items: center;
+}
+
+.post-content {
+  line-height: 1.6;
+  margin-bottom: 30px;
+  min-height: 100px;
+}
+
+.post-content p {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.post-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.post-actions button {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.edit-button {
+  background-color: #2196F3;
+  color: white;
+  border-color: #2196F3;
+}
+
+.edit-button:hover {
+  background-color: #1976D2;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+  border-color: #f44336;
+}
+
+.delete-button:hover {
+  background-color: #d32f2f;
+}
+
+.post-actions button:last-child {
+  background-color: white;
+  color: #666;
+}
+
+.post-actions button:last-child:hover {
+  background-color: #f0f0f0;
 }

@@ -1,6 +1,6 @@
 import PaginationControls from './PaginationControls'
-import PaginationInfo from './PaginationInfo'
 import { usePagination } from '../hooks/usePagination'
+import PaginationInfo from '../components/PaginationInfo'
 
 interface UserData {
   id: number
@@ -13,7 +13,8 @@ interface UserData {
 }
 
 const TablePagination = () => {
-  const allUsers: UserData[] = [
+  // 12개 샘플 데이터를 50개로 늘리기 위해 반복 생성
+  const baseUsers: UserData[] = [
     { id: 1, name: '김철수', address: '서울시 강남구', email: 'kimcs@example.com', age: 25, joinDate: '2023-03-15', employmentStatus: '재직' },
     { id: 2, name: '이영희', address: '부산시 해운대구', email: 'leeyh@example.com', age: 30, joinDate: '2022-07-10', employmentStatus: '재직' },
     { id: 3, name: '박민수', address: '대구시 중구', email: 'parkms@example.com', age: 28, joinDate: '2023-01-20', employmentStatus: '휴직' },
@@ -26,7 +27,17 @@ const TablePagination = () => {
     { id: 10, name: '송미래', address: '제주도 제주시', email: 'songmr@example.com', age: 24, joinDate: '2023-08-01', employmentStatus: '휴직' },
     { id: 11, name: '배준혁', address: '충북 청주시', email: 'baejh@example.com', age: 35, joinDate: '2019-04-22', employmentStatus: '재직' },
     { id: 12, name: '서은비', address: '전북 전주시', email: 'seoeb@example.com', age: 28, joinDate: '2022-03-18', employmentStatus: '재직' }
-  ]
+  ];
+  // 157개로 늘리기
+  const allUsers: UserData[] = Array.from({ length: 157 }, (_, i) => {
+    const base = baseUsers[i % baseUsers.length];
+    return {
+      ...base,
+      id: i + 1,
+      name: `${base.name}${i + 1}`,
+      email: base.email.replace('@', `${i + 1}@`),
+    };
+  });
 
   const {
     currentPage,
@@ -87,6 +98,8 @@ const TablePagination = () => {
         onPageChange={goToPage}
         onPrevious={goToPrevious}
         onNext={goToNext}
+        onFirst={() => goToPage(1)}
+        onLast={() => goToPage(totalPages)}
       />
     </div>
   )

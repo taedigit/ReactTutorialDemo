@@ -4,6 +4,8 @@ interface PaginationControlsProps {
   onPageChange: (page: number) => void
   onPrevious: () => void
   onNext: () => void
+  onFirst: () => void
+  onLast: () => void
 }
 
 const PaginationControls = ({ 
@@ -11,10 +13,19 @@ const PaginationControls = ({
   totalPages, 
   onPageChange, 
   onPrevious, 
-  onNext 
+  onNext,
+  onFirst,
+  onLast
 }: PaginationControlsProps) => {
   return (
     <div className="pagination-controls">
+      <button 
+        className="pagination-button" 
+        onClick={onFirst}
+        disabled={currentPage === 1}
+      >
+        처음
+      </button>
       <button 
         className="pagination-button" 
         onClick={onPrevious}
@@ -41,6 +52,13 @@ const PaginationControls = ({
         disabled={currentPage === totalPages}
       >
         다음
+      </button>
+      <button 
+        className="pagination-button" 
+        onClick={onLast}
+        disabled={currentPage === totalPages}
+      >
+        끝
       </button>
     </div>
   )

@@ -3,6 +3,7 @@ import TableRowEdit from './TableRowEdit'
 import RowAddDelete from './RowAddDelete'
 import TablePagination from './TablePagination'
 import TableSearch from './TableSearch'
+import PopupDemo from './PopupDemo'
 
 const MainContent = () => {
   return (
