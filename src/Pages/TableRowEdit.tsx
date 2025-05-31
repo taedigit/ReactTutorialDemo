@@ -1,7 +1,5 @@
 import { useState } from 'react'
 import { useSelectAll } from '../hooks/useSelectAll'
-import SelectAllCheckbox from './SelectAllCheckbox'
-import RowCheckbox from './RowCheckbox'
 
 interface UserData {
   id: number
